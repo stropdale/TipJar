@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E493B00D21EF63CB0022B629 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B00C21EF63CB0022B629 /* AppDelegate.swift */; };
-		E493B00F21EF63CB0022B629 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B00E21EF63CB0022B629 /* ViewController.swift */; };
 		E493B01221EF63CB0022B629 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B01021EF63CB0022B629 /* Main.storyboard */; };
 		E493B01421EF63CE0022B629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E493B01321EF63CE0022B629 /* Assets.xcassets */; };
 		E493B01721EF63CE0022B629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B01521EF63CE0022B629 /* LaunchScreen.storyboard */; };
+		E493B02121EF64370022B629 /* TipJarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B02021EF64370022B629 /* TipJarViewController.swift */; };
+		E493B02C21EF67290022B629 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E493B02B21EF67290022B629 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E493B00921EF63CB0022B629 /* TipJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B00C21EF63CB0022B629 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E493B00E21EF63CB0022B629 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E493B01121EF63CB0022B629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E493B01321EF63CE0022B629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E493B01621EF63CE0022B629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E493B01821EF63CE0022B629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E493B02021EF64370022B629 /* TipJarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJarViewController.swift; sourceTree = "<group>"; };
+		E493B02B21EF67290022B629 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E493B02C21EF67290022B629 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				E493B00B21EF63CB0022B629 /* TipJar */,
 				E493B00A21EF63CB0022B629 /* Products */,
+				E493B02A21EF67290022B629 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +58,38 @@
 		E493B00B21EF63CB0022B629 /* TipJar */ = {
 			isa = PBXGroup;
 			children = (
+				E493B01F21EF64060022B629 /* Controllers */,
+				E493B01E21EF63FA0022B629 /* User Interface */,
 				E493B00C21EF63CB0022B629 /* AppDelegate.swift */,
-				E493B00E21EF63CB0022B629 /* ViewController.swift */,
 				E493B01021EF63CB0022B629 /* Main.storyboard */,
 				E493B01321EF63CE0022B629 /* Assets.xcassets */,
 				E493B01521EF63CE0022B629 /* LaunchScreen.storyboard */,
 				E493B01821EF63CE0022B629 /* Info.plist */,
 			);
 			path = TipJar;
+			sourceTree = "<group>";
+		};
+		E493B01E21EF63FA0022B629 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E493B02021EF64370022B629 /* TipJarViewController.swift */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		E493B01F21EF64060022B629 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E493B02A21EF67290022B629 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E493B02B21EF67290022B629 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +124,11 @@
 				TargetAttributes = {
 					E493B00821EF63CB0022B629 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E493B00F21EF63CB0022B629 /* ViewController.swift in Sources */,
+				E493B02121EF64370022B629 /* TipJarViewController.swift in Sources */,
 				E493B00D21EF63CB0022B629 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
