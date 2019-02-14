@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4351CDF22158A4C00E1D680 /* NotificationNameExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4351CDC22158A4C00E1D680 /* NotificationNameExtensions.swift */; };
+		E4351CE022158A4C00E1D680 /* StoreKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4351CDD22158A4C00E1D680 /* StoreKitExtensions.swift */; };
+		E4351CE122158A4C00E1D680 /* TipJarControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4351CDE22158A4C00E1D680 /* TipJarControllers.swift */; };
 		E493B00D21EF63CB0022B629 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B00C21EF63CB0022B629 /* AppDelegate.swift */; };
 		E493B01221EF63CB0022B629 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B01021EF63CB0022B629 /* Main.storyboard */; };
 		E493B01421EF63CE0022B629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E493B01321EF63CE0022B629 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E4351CDC22158A4C00E1D680 /* NotificationNameExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNameExtensions.swift; sourceTree = "<group>"; };
+		E4351CDD22158A4C00E1D680 /* StoreKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreKitExtensions.swift; sourceTree = "<group>"; };
+		E4351CDE22158A4C00E1D680 /* TipJarControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipJarControllers.swift; sourceTree = "<group>"; };
 		E493B00921EF63CB0022B629 /* TipJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B00C21EF63CB0022B629 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E493B01121EF63CB0022B629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +44,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4351CDB22158A3B00E1D680 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4351CDC22158A4C00E1D680 /* NotificationNameExtensions.swift */,
+				E4351CDD22158A4C00E1D680 /* StoreKitExtensions.swift */,
+				E4351CDE22158A4C00E1D680 /* TipJarControllers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E493B00021EF63CA0022B629 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +74,7 @@
 		E493B00B21EF63CB0022B629 /* TipJar */ = {
 			isa = PBXGroup;
 			children = (
+				E4351CDB22158A3B00E1D680 /* Model */,
 				E493B01F21EF64060022B629 /* Controllers */,
 				E493B01E21EF63FA0022B629 /* User Interface */,
 				E493B00C21EF63CB0022B629 /* AppDelegate.swift */,
@@ -168,8 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4351CE022158A4C00E1D680 /* StoreKitExtensions.swift in Sources */,
+				E4351CDF22158A4C00E1D680 /* NotificationNameExtensions.swift in Sources */,
 				E493B02121EF64370022B629 /* TipJarViewController.swift in Sources */,
 				E493B00D21EF63CB0022B629 /* AppDelegate.swift in Sources */,
+				E4351CE122158A4C00E1D680 /* TipJarControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
